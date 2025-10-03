@@ -1,0 +1,8 @@
+<div class="carrusel-container">
+  <div class="carrusel" [style.transform]="'translateX(-' + actualIndex * 100 + '%)'">
+    <div class="carta" *ngFor="let carta of cards">
+      <img [src]="carta.img" [alt]="carta.nombre">
+      <p>{{ carta.nombre }}</p>
+    </div>
+  </div>
+</div>

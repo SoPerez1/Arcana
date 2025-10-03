@@ -1,0 +1,87 @@
+.fortune-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* para que no se corte en móviles */
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  margin: 2rem auto;
+  background: transparent;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--primary-light); 
+  color: var(--primary-light);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 2rem;
+  min-width: 130px;
+  text-align: center;
+}
+
+.filter-btn:hover {
+  background: var(--primary-hover);
+  color: var(--input-bg);
+}
+
+.filter-btn.active {
+  background: var(--primary-light);
+  color: var(--input-bg);
+  font-weight: bold;
+}
+
+/* Botón especial para ">" */
+.filter-btn:last-child {
+  min-width: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.message {
+  font-size: 20px;
+  font-style: italic;
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.6;
+  animation: fadeIn 1s ease;
+  color: var(--input-bg);
+}
+
+button {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  background-color: var(--text-accent);
+  color: var(--input-bg);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--text-primary);
+}
+
+div p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

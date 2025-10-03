@@ -1,0 +1,47 @@
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔹 centrado horizontal */
+  margin-right: 0;       /* 🔹 sacamos el empuje a la derecha */
+  perspective: 1000px;
+  justify-content: flex-start;
+}
+.card {
+  width: 150px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+  margin-bottom: 15px;
+  position: relative;
+}
+.card.flipped {
+  transform: rotateY(180deg);
+}
+.card-face {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-back {
+  transform: rotateY(0deg);
+}
+.card-front {
+  transform: rotateY(180deg);
+}
+.card-description {
+  text-align: center;
+  flex-direction: 250px;
+}
+.tarot-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+h3 {
+  margin-bottom: 10px;
+  font-size: 10px;
+  text-align: end;
+}

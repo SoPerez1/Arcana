@@ -1,0 +1,15 @@
+<div class="board">
+  <div class="card" *ngFor="let card of cards" (click)="flipCard(card)">
+    <div *ngIf="!card.revealed" class="back">
+      <p>🃏 Hidden Card</p>
+    </div>
+
+    
+    <div *ngIf="card.revealed" [class.reversed]="card.isReversed">
+      <h3>{{ card.name }}</h3>
+      <p>
+        {{ card.isReversed ? card.reversed : card.upright }}
+      </p>
+    </div>
+  </div>
+</div>

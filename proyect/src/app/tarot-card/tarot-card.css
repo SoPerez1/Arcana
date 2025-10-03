@@ -1,0 +1,35 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  width: 180px;
+  height: 250px;
+  border: 2px solid purple;
+  border-radius: 12px;
+  background: #fdf6ff;
+  box-shadow: 0 4px 10px rgba(128, 0, 128, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  padding: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.back {
+  font-size: 18px;
+  color: gray;
+}
+
+.reversed {
+  transform: rotate(180deg);
+}

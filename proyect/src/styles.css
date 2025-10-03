@@ -1,0 +1,93 @@
+:root {
+  /* 🎨 Colores principales */
+  --primary: #c2a97a;          /* dorado/beige (acentos, botones) */
+  --primary-dark: #9d845f;     /* versión más oscura para hover */
+  --primary-light: #e1d0aa;    /* versión más clara */
+
+  /* 🌑 Fondos */
+  --background: #0a0a0a;       /* negro profundo */
+  --card-bg: rgba(255, 255, 255, 0.05); /* fondo sutil de cards */
+  --shadow: rgba(0, 0, 0, 0.3);
+
+  /* ✨ Texto */
+  --text-primary: #e5e5e5;     /* texto normal */
+  --text-secondary: #bfbfbf;   /* texto más suave */
+  --text-accent: #7b5ea8;      /* violeta místico */
+  --text-muted: #6f6f6f;
+
+  /* 🔲 Elementos UI */
+  --input-bg: #1a1a1a;
+}
+
+body {
+  background: var(--background);
+  background-size: cover;
+  color: var(--input-bg);
+  font-family: sans-serif;
+}
+
+.hero {
+  background: url("assets/fondo/bosque.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: var(--input-bg);
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: var(--text-accent);
+  text-shadow: 2px 2px 8px var(--text-primary);
+  background: linear-gradient(to right, #c1baa1 40%, var(--text-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-muted);
+}
+
+article {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  margin-bottom: 16px;
+  border-radius: 2rem 0 2rem 0;
+  box-shadow: 0px 1px 3px 0px var(--shadow);
+}
+
+article svg {
+  color: var(--primary-light);
+  background: rgba(0,152,255,0.3);
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+  padding: 16px;
+}
+
+main > section :nth-child(2) footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  main > section:nth-child(2) footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+  }
+}
